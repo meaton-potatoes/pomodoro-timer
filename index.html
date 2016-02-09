@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Pomodoro Timer</title>
+		<link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="./pomodoro-timer.css">
+	</head>
+
+	<body>
+
+		<div id=main class="container">
+			<h1>Pomodoro Timer</h1>
+			<div id=setTime>
+				<div class="row">
+					<div class="col-md-6">
+						<div id="break"><h2>Break Time</h2><div class="btn-group"><button type="button" class="btn btn-danger btn-lg" id="subtractBreak"><i class="fa fa-minus"></i></button><input type="text" class="btn btn-lg btn-danger" id="breakTime" value=5><button type="button" class="btn btn-danger btn-lg" id="addBreak"><i class="fa fa-plus"></i></button></div></div>
+					</div>
+					<div class="col-md-6">
+						<div id="session"><h2>Session Length</h2><div class="btn-group"><button type="button" class="btn btn-danger btn-lg" id="subtractSession"><i class="fa fa-minus"></i></button><input type="text" class="btn btn-lg btn-danger" id="sessionTime" value=25><button type="button" class="btn btn-danger btn-lg" id="addSession"><i class="fa fa-plus"></i></button></div></div>
+					</div>		
+				</div>
+				<div class="row">
+					<button type="button" class="btn btn-danger btn-lg" id="start" onclick="timer()">Start</button>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 tomato-row">
+					<div id="tomato">
+						<div id="current"></div>
+						<div id="timeGoesHere"></div>
+						<button type="button" class="btn btn-primary btn-lg" id="restart" onclick="restart()"><i class="fa fa-play"></i></button>
+						<button type="button" class="btn btn-primary btn-lg" id="pause" onclick="pause()"><i class="fa fa-pause"></i></button>
+						<audio>
+							<source src="http://www.wavsource.com/snds_2015-07-19_1628654123857389/sfx/fanfare3.wav" type="audio/wav">
+							<source src="http://www.wavsource.com/snds_2015-07-19_1628654123857389/sfx/fanfare2.wav" type="audio/wav">
+						</audio>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script src="./pomodoro-timer.js"></script>
+
+	</body>
+</html>
